@@ -1,0 +1,328 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #ffffff;
+  color: #0e2b21;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 180px;
+  background: #f8f8fa;
+  border-right: 1px solid #e0e0e0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar .logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #0e2b21;
+}
+
+.sidebar h4 {
+  margin-top: 20px;
+  padding: 6px;
+  font-size: 13px;
+  color: #9ca0a1;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  font-size: 13px;
+  padding: 6px 10px;
+  color: #4d5f59;
+}
+
+.sidebar li.active {
+  /* font-weight: bold; */
+  color: #0e2b21;
+  background-color: #d9fff7;
+}
+
+.sidebar .user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.sidebar .user img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+/* Main */
+.main {
+  flex: 1;
+  padding: 30px;
+}
+
+.main-header h1 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.light {
+  color: #888;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.status-tabs {
+  display: flex;
+  gap: 0px;
+  margin-bottom: 20px;
+}
+
+.status-tabs button {
+  padding: 10px 14px;
+  border: none;
+  background: #f8f8fa;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #0e2b21;
+}
+
+.status-tabs button.active {
+  background: #19b091;
+  color: white;
+}
+
+.status-tabs .count {
+  font-weight: bold;
+  margin-left: 5px;
+  padding: 2px 8px;
+  border-radius: 2px;
+  background: #e3e3e6;
+}
+
+.status-tabs button.active .count {
+  background: #1cc2a1;
+}
+
+.top-actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.top-actions input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 0px;
+  background: #f8f8fa;
+  border-radius: 6px;
+}
+
+.top-actions input:focus {
+  outline: 1px;
+}
+
+.export-btn {
+  padding: 8px 12px;
+  background: #f8f8fa;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Table */
+.table-section {
+  overflow-x: auto;
+  background: white;
+  border-radius: 8px;
+  border: 2px solid #f0f0f0;
+  /* padding: 20px; */
+  box-shadow: 0 0 6px rgba(0,0,0,0.05);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+thead {
+  background: #ffffff;
+  text-align: left;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+th, td {
+  padding: 12px 10px;
+  /* border-bottom: 1px solid #eee; */
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  color: white;
+  display: inline-block;
+}
+
+.badge.green {
+  background: #2ecc71;
+}
+
+.badge.blue {
+  background: #3498db;
+}
+
+.badge.red {
+  background: #e74c3c;
+}
+
+.badge.orange {
+  background: #e67e22;
+}
+
+.status-dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.status-dot.green {
+  background: #2ecc71;
+}
+
+.status-dot.blue {
+  background: #3498db;
+}
+
+.status-dot.red {
+  background: #e74c3c;
+}
+
+.status-dot.orange {
+  background: #e67e22;
+}
+
+#filters {
+  /* appearance: none; Remove default arrow (cross-browser) */
+  /* -webkit-appearance: none; */
+  /* -moz-appearance: none; */
+
+  padding: 10px 14px;
+  font-size: 14px;
+  border: 0px;
+  border-radius: 6px;
+  background: #f8f8fa;
+  color: #0e2b21;
+
+  /* background-image: url('data:image/svg+xml;utf8,<svg fill="gray" height="14" viewBox="0 0 20 20" width="14" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>'); */
+  /* background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px; */
+  padding-right: 34px; /* Leave space for the arrow */
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+#filters:focus {
+  border-color: #1abc9c;
+  outline: none;
+}
+
+#filters:hover {
+  border-color: #999;
+}
+
+.top-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar-toggle {
+  font-size: 20px;
+  padding: 6px 10px;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.sidebar-toggle:hover {
+  background: #c5fff3;
+}
+
+/* Collapse behavior */
+.sidebar.collapsed {
+  width: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.main.expanded {
+  margin-left: 0;
+  transition: margin 0.3s ease;
+}
+
+tbody tr:hover {
+  background-color: #f0f9f7; /* Change to your desired color */
+  transition: background 0.2s;
+}
+
+.sidebar-popup {
+  position: fixed;
+  top: 0;
+  right: 0px;
+  width: 400px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  transition: right 0.3s;
+  z-index: 1000;
+  padding: 12px;
+  overflow-y: auto;
+}
+/* .sidebar-popup.active {
+  right: 0;
+} */
+
+.sidebar button {
+  padding: 10px 14px;
+  border: none;
+  background: #f8f8fa;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #0e2b21;
+}
+
+.user {
+  font-size: 12px;
+}
